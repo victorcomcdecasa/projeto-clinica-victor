@@ -78,7 +78,7 @@ const fazerAgendamento = async () => {
     const token = localStorage.getItem('token');
     
     // O endereço TEM que ser esse aqui (confira barra por barra):
-    await axios.post('https://https://proviclinica.onrender.com/api/services/agendar', {
+    await axios.post('https://proviclinica.onrender.com/api/services/agendar', {
       especialidade: novoAgendamento.value.especialidade,
       data: novoAgendamento.value.data,
       hora: novoAgendamento.value.hora,
@@ -103,7 +103,7 @@ const agendamentos = ref([]);
 const buscarAgendamentos = async () => {
   try {
     const token = localStorage.getItem('token');
-    const res = await axios.get('https://https://proviclinica.onrender.com/api/services/meus-agendamentos', {
+    const res = await axios.get('https://proviclinica.onrender.com/api/services/meus-agendamentos', {
       headers: { 'x-auth-token': token }
     });
     agendamentos.value = res.data;
