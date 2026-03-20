@@ -54,7 +54,7 @@ const buscarCEP = async () => {
   if (form.value.cep.length === 8) {
     buscandoCep.value = true;
     try {
-      const res = await axios.get(`http://127.0.0.1:5000/api/services/cep/${form.value.cep}`);
+      const res = await axios.get(`https://projeto-clinica-victor.onrender.com/api/services/cep/${form.value.cep}`);
       form.value.logradouro = res.data.logradouro;
       form.value.bairro = res.data.bairro;
       form.value.cidade = res.data.localidade;
@@ -68,7 +68,7 @@ const buscarCEP = async () => {
 
 const handleRegister = async () => {
   try {
-    await axios.post('http://127.0.0.1:5000/api/auth/register', form.value);
+    await axios.post('https://projeto-clinica-victor.onrender.com/api/auth/register', form.value);
     alert('Cadastro realizado! Agora faça login.');
     router.push('/');
   } catch (err) {
