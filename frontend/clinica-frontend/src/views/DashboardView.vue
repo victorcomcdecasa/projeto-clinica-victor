@@ -78,7 +78,7 @@ const fazerAgendamento = async () => {
     const token = localStorage.getItem('token');
     
     // O endereço TEM que ser esse aqui (confira barra por barra):
-    await axios.post('https://projeto-clinica-victor.onrender.com/api/services/agendar', {
+    await axios.post('https://clinica-backend-v2.onrender.com/api/services/agendar', {
       especialidade: novoAgendamento.value.especialidade,
       data: novoAgendamento.value.data,
       hora: novoAgendamento.value.hora,
@@ -103,7 +103,7 @@ const agendamentos = ref([]);
 const buscarAgendamentos = async () => {
   try {
     const token = localStorage.getItem('token');
-    const res = await axios.get('https://projeto-clinica-victor.onrender.com/api/services/meus-agendamentos', {
+    const res = await axios.get('https://clinica-backend-v2.onrender.com/api/services/meus-agendamentos', {
       headers: { 'x-auth-token': token }
     });
     agendamentos.value = res.data;
@@ -129,7 +129,7 @@ onMounted(async () => {
 
   // 2. Busca o clima no seu Backend
   try {
-    const res = await axios.get(`https://projeto-clinica-victor.onrender.com/api/services/clima/${cidade.value}`);
+    const res = await axios.get(`https://clinica-backend-v2.onrender.com/api/services/clima/${cidade.value}`);
     clima.value = res.data;
   } catch (err) {
     console.error("Erro ao carregar clima:", err);
