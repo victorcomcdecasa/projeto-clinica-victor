@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: 'https://clinica-backend-v2.onrender.com',
+  origin: 'https://proviclinicafe.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'x-auth-token'], // LIBERA O TOKEN NO CORS
   credentials: true
