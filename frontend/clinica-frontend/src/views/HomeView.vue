@@ -46,7 +46,7 @@ const handleLogin = async () => {
   
   try {
     // Usando 127.0.0.1 para não ter erro de conexão
-    const response = await axios.post('https://projeto-clinica-victor.onrender.com/api/auth/login', {
+    const response = await axios.post('https://clinica-backend-v2.onrender.com/api/auth/login', {
   email: email.value,
   senha: senha.value
 });
