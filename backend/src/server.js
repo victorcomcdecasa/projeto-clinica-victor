@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // O endereço do seu Frontend
+  origin: 'https://clinica-victor-frontend.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'x-auth-token'], // LIBERA O TOKEN NO CORS
   credentials: true
